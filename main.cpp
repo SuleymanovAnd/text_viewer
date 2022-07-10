@@ -4,14 +4,14 @@ int main() {
 
     std::cout << "Enter file path:" << std::endl;
     std::string path;
-    std::getline(std::cin,path)  ;
+    std::getline(std::cin,path) ;
 
     std::ifstream file;
     file.open (path,std::ios::binary);
     // проверка открылся ли файл
     while  ( !file.is_open ()){
         std::cout << "Enter correct file path:" << std::endl;
-        std::cin >> path;
+        std::getline(std::cin,path) ;
         file.open (path,std::ios::binary);
     }
     //
